@@ -14,6 +14,18 @@ main {
     grid-template-rows: 1.2fr 8.8fr 1.5fr;
 }
 
+@media screen and (max-width: 1100px) {
+    main {
+        overflow-x: auto;
+    }
+    .album-details {
+        display: none;
+    }
+    .control-icons .fa-solid {
+        display: none;
+    }
+}
+
 .navbar {
     grid-column: 1/3;
     display: flex;
@@ -24,6 +36,7 @@ main {
 .logo {
     padding-left: 1.5rem;
     cursor: pointer;
+    width: 24rem;
 }
 
 .logo img {
@@ -35,7 +48,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 22rem;
+    /* margin-left: 22rem; */
 }
 
 .search-area > i {
@@ -44,6 +57,10 @@ main {
     background-color: #242424;
     border-radius: 32px;
     cursor: pointer;
+    opacity: 75%;
+    &:hover {
+        opacity: 100%;
+    }
 }
 
 .search-button {
@@ -51,7 +68,7 @@ main {
     width: 30rem;
     background-color: #242424;
     border-radius: 50px;
-    margin-left: 0.5rem;
+    margin: 0 0.5rem;
     color: #ffffffaf;
     cursor: pointer;
     display: flex;
@@ -93,6 +110,8 @@ main {
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+    column-gap: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .premium-btn, .install-btn {
@@ -303,6 +322,7 @@ main {
 
 .album {
     width: 25%;
+    margin-right: 0.5rem;
 }
 
 .player {
@@ -326,6 +346,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0.5rem;
 }
 
 .playback-bar {
@@ -333,6 +354,7 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 0.5rem;
+    margin: 0 0.5rem;
 }
 
 .progress-bar {
@@ -411,6 +433,7 @@ main {
     display: flex;
     justify-content :end;
     align-items: center;
+    margin: 0 0.5rem;
 }
 
 .control-icons .fa-solid, .control-vol .vol-bar {
